@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Todo Barato Hogar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/img/Favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Header fijo -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo_Barato.png" alt="Todo Barato Hogar" class="logo-img">
+                    <span class="logo-text">Todo Barato Hogar</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="productos.html" class="nav-link active">Productos</a></li>
+                        <li><a href="index.html#categorias" class="nav-link">Categorías</a></li>
+                        <li><a href="index.html#ubicacion" class="nav-link">Ubicación</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="index.html" class="btn btn-outline">Volver al inicio</a>
+                    <a href="#carrito" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" aria-label="Abrir menú">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú móvil -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo-mobile">
+                <img src="assets/img/logo_Barato.png" alt="Todo Barato Hogar" class="logo-img-mobile">
+                <span>Todo Barato Hogar</span>
+            </div>
+            <button class="mobile-menu-close" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav">
+            <li><a href="index.html" class="mobile-nav-link">Inicio</a></li>
+            <li><a href="productos.html" class="mobile-nav-link active">Productos</a></li>
+            <li><a href="index.html#categorias" class="mobile-nav-link">Categorías</a></li>
+            <li><a href="index.html#ubicacion" class="mobile-nav-link">Ubicación</a></li>
+        </ul>
+    </div>
+
+    <!-- Banner de catálogo -->
+    <section class="catalogo-hero">
+        <div class="container">
+            <div class="catalogo-hero-content">
+                <h1 class="catalogo-hero-title">Catálogo de productos</h1>
+                <p class="catalogo-hero-text">Descubre nuestra selección de productos para cada espacio de tu hogar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aviso importante -->
+    <div class="container">
+        <div class="aviso-compra">
+            <i class="fas fa-store"></i>
+            <p><strong>Las compras se realizan exclusivamente en tienda física.</strong> Este sitio es para consulta de productos y precios referenciales. Puedes solicitar disponibilidad antes de visitarnos.</p>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="catalogo-main">
+        <div class="container">
+            <div class="catalogo-content">
+                <!-- Filtros -->
+                <aside class="catalogo-sidebar">
+                    <div class="filtros">
+                        <h3 class="filtros-title">Filtrar por categoría</h3>
+                        <div class="filtros-options">
+                            <button class="filtro-btn active" data-categoria="todos">Todos los productos</button>
+                            <button class="filtro-btn" data-categoria="cama">Ropa de cama</button>
+                            <button class="filtro-btn" data-categoria="cocina">Cocina</button>
+                            <button class="filtro-btn" data-categoria="menaje">Menaje</button>
+                            <button class="filtro-btn" data-categoria="organizacion">Organización</button>
+                            <button class="filtro-btn" data-categoria="otras">Otras</button>
+                        </div>
+                    </div>
+                    
+                    <div class="info-sidebar">
+                        <h3 class="info-sidebar-title">¿Cómo comprar?</h3>
+                        <ol class="info-sidebar-list">
+                            <li>Selecciona los productos que te interesan</li>
+                            <li>Añádelos al carrito de demostración</li>
+                            <li>Genera tu solicitud de pedido</li>
+                            <li>Consulta disponibilidad antes de visitarnos</li>
+                            <li>Compra final en tienda física</li>
+                        </ol>
+                    </div>
+                </aside>
+                
+                <!-- Grid de productos -->
+                <div class="catalogo-productos">
+                    <div class="productos-grid productos-catalogo" id="productos-grid">
+                        <!-- Los productos se cargarán dinámicamente con JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Carrito de compras -->
+    <section id="carrito" class="section carrito-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tu solicitud de pedido</h2>
+                <p class="section-subtitle">Revisa los productos que te interesan y genera tu solicitud</p>
+            </div>
+            
+            <div class="carrito-container">
+                <div class="carrito-header">
+                    <h3>Productos seleccionados (<span id="carrito-total-items">0</span>)</h3>
+                    <button id="vaciar-carrito" class="btn btn-text">
+                        <i class="fas fa-trash-alt"></i> Vaciar carrito
+                    </button>
+                </div>
+                
+                <div class="carrito-items" id="carrito-items">
+                    <!-- Los productos del carrito se cargarán aquí -->
+                    <div class="carrito-vacio" id="carrito-vacio">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Tu carrito está vacío</p>
+                        <p class="text-small">Agrega productos desde el catálogo</p>
+                    </div>
+                </div>
+                
+                <div class="carrito-resumen" id="carrito-resumen" style="display: none;">
+                    <div class="resumen-content">
+                        <h3>Resumen de solicitud</h3>
+                        <div class="resumen-detalle">
+                            <div class="resumen-item">
+                                <span>Productos:</span>
+                                <span id="resumen-cantidad">0</span>
+                            </div>
+                            <div class="resumen-item total">
+                                <span>Total referencial:</span>
+                                <span id="resumen-total">$0</span>
+                            </div>
+                        </div>
+                        <p class="resumen-nota">* Los precios son referenciales y sujetos a confirmación en tienda.</p>
+                        
+                        <div class="resumen-acciones">
+                            <button id="generar-pedido" class="btn btn-primary btn-large">
+                                <i class="fab fa-whatsapp"></i> Solicitar por WhatsApp
+                            </button>
+                            <button id="generar-email" class="btn btn-secondary btn-large">
+                                <i class="far fa-envelope"></i> Solicitar por Email
+                            </button>
+                        </div>
+                        
+                        <div class="resumen-info">
+                            <p><i class="fas fa-info-circle"></i> Al generar la solicitud, se creará un mensaje con los productos que te interesan para consultar disponibilidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="assets/img/logo_Barato.png" alt="Todo Barato Hogar" class="logo-img-footer">
+                        <span class="logo-text">Todo Barato Hogar</span>
+                    </a>
+                    <p class="footer-desc">Productos seleccionados para transformar tu hogar en un espacio de confort y elegancia.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/todobaratohogar" class="social-link" aria-label="Facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/todobaratohogar" class="social-link" aria-label="Instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/todobaratohogar" class="social-link" aria-label="Twitter" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="index.html#categorias">Categorías</a></li>
+                        <li><a href="index.html#ubicacion">Ubicación</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Categorías</h3>
+                    <ul class="footer-links">
+                        <li><a href="productos.html?categoria=cama">Ropa de cama</a></li>
+                        <li><a href="productos.html?categoria=cocina">Cocina</a></li>
+                        <li><a href="productos.html?categoria=menaje">Menaje</a></li>
+                        <li><a href="productos.html?categoria=organizacion">Organización</a></li>
+                        <li><a href="productos.html?categoria=otras">Otras</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Aníbal Pinto 347, Nueva Imperial</li>
+                        <li><i class="fas fa-phone-alt"></i> +56 2 2345 6789</li>
+                        <li><i class="far fa-envelope"></i> info@todobaratohogar.cl</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Todo Barato Hogar. Todos los derechos reservados. - Template By Löwe Studio</p>
+                <div class="footer-legal">
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos y condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Iconos flotantes de redes sociales -->
+    <div class="floating-icons">
+        <a href="https://wa.me/+56912345678" class="floating-icon whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="floating-tooltip">¡Contáctanos!</span>
+        </a>
+        <a href="https://instagram.com/todobaratohogar" class="floating-icon instagram" target="_blank" rel="noopener" aria-label="Seguir en Instagram">
+            <i class="fab fa-instagram"></i>
+            <span class="floating-tooltip">Síguenos</span>
+        </a>
+        <a href="https://facebook.com/todobaratohogar" class="floating-icon facebook" target="_blank" rel="noopener" aria-label="Seguir en Facebook">
+            <i class="fab fa-facebook-f"></i>
+            <span class="floating-tooltip">Visítanos</span>
+        </a>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Barato Hogar | Productos Premium para tu Hogar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/img/Favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Header fijo -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo_Barato.png" alt="Todo Barato Hogar" class="logo-img">
+                    <span class="logo-text">Todo Barato Hogar</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                        <li><a href="productos.html" class="nav-link">Productos</a></li>
+                        <li><a href="#categorias" class="nav-link">Categorías</a></li>
+                        <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="productos.html" class="btn btn-primary">Ver productos</a>
+                    <a href="productos.html#carrito" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" aria-label="Abrir menú">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú móvil -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo-mobile">
+                <img src="assets/img/logo_Barato.png" alt="Todo Barato Hogar" class="logo-img-mobile">
+                <span>Todo Barato Hogar</span>
+            </div>
+            <button class="mobile-menu-close" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav">
+            <li><a href="index.html" class="mobile-nav-link active">Inicio</a></li>
+            <li><a href="productos.html" class="mobile-nav-link">Productos</a></li>
+            <li><a href="#categorias" class="mobile-nav-link">Categorías</a></li>
+            <li><a href="#ubicacion" class="mobile-nav-link">Ubicación</a></li>
+            <li><a href="#como-funciona" class="mobile-nav-link">Cómo funciona</a></li>
+        </ul>
+    </div>
+
+    <!-- Sección Hero con imagen y container inferior centrado -->
+    <section class="hero">
+        <div class="hero-image" style="background-image: url('assets/img/Hero_todobarato.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container-bottom">
+            <div class="hero-content-bottom">
+                <h1 class="hero-title">Transforma tu hogar con elegancia y confort</h1>
+                <div class="hero-actions">
+                    <a href="productos.html" class="btn btn-primary btn-large">Descubrir productos</a>
+                    <a href="#categorias" class="btn btn-secondary btn-large">Ver categorías</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Categorías -->
+    <section id="categorias" class="section categorias">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Categorías destacadas</h2>
+                <p class="section-subtitle">Encuentra lo que necesitas para cada espacio de tu hogar</p>
+            </div>
+            
+            <div class="categorias-grid">
+                <div class="categoria-card">
+                    <div class="categoria-img" style="background-color: #f8f1e9;">
+                        <img src="assets/img/Productos/cama1.png" alt="Ropa de cama" class="categoria-imagen-real" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="img-placeholder" style="display: none;">🛏️</div>
+                    </div>
+                    <div class="categoria-content">
+                        <h3 class="categoria-title">Ropa de cama</h3>
+                        <p class="categoria-desc">Sábanas, edredones y almohadas para el mejor descanso.</p>
+                        <a href="productos.html?categoria=cama" class="btn btn-outline">Ver productos</a>
+                    </div>
+                </div>
+                
+                <div class="categoria-card">
+                    <div class="categoria-img" style="background-color: #f0f7ee;">
+                        <img src="assets/img/Productos/cocina1.png" alt="Cocina" class="categoria-imagen-real" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="img-placeholder" style="display: none;">🍳</div>
+                    </div>
+                    <div class="categoria-content">
+                        <h3 class="categoria-title">Cocina</h3>
+                        <p class="categoria-desc">Utensilios y electrodomésticos para tu espacio culinario.</p>
+                        <a href="productos.html?categoria=cocina" class="btn btn-outline">Ver productos</a>
+                    </div>
+                </div>
+                
+                <div class="categoria-card">
+                    <div class="categoria-img" style="background-color: #f5f0f8;">
+                        <img src="assets/img/Productos/menaje1.png" alt="Menaje" class="categoria-imagen-real" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="img-placeholder" style="display: none;">🍽️</div>
+                    </div>
+                    <div class="categoria-content">
+                        <h3 class="categoria-title">Menaje</h3>
+                        <p class="categoria-desc">Vajillas, cristalería y cubiertos para cada ocasión.</p>
+                        <a href="productos.html?categoria=menaje" class="btn btn-outline">Ver productos</a>
+                    </div>
+                </div>
+                
+                <div class="categoria-card">
+                    <div class="categoria-img" style="background-color: #eef8f7;">
+                        <img src="assets/img/Productos/organizacion1.png" alt="Organización" class="categoria-imagen-real" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="img-placeholder" style="display: none;">🗄️</div>
+                    </div>
+                    <div class="categoria-content">
+                        <h3 class="categoria-title">Organización</h3>
+                        <p class="categoria-desc">Soluciones para mantener cada espacio ordenado y funcional.</p>
+                        <a href="productos.html?categoria=organizacion" class="btn btn-outline">Ver productos</a>
+                    </div>
+                </div>
+                
+                <div class="categoria-card">
+                    <div class="categoria-img" style="background-color: #f9f3e9;">
+                        <img src="assets/img/Productos/otras1.png" alt="Otras categorías" class="categoria-imagen-real" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="img-placeholder" style="display: none;">✨</div>
+                    </div>
+                    <div class="categoria-content">
+                        <h3 class="categoria-title">Otras</h3>
+                        <p class="categoria-desc">Decoración, iluminación y accesorios para el hogar.</p>
+                        <a href="productos.html?categoria=otras" class="btn btn-outline">Ver productos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Productos Destacados -->
+    <section class="section destacados">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Productos destacados</h2>
+                <p class="section-subtitle">Lo más vendido y mejor valorado por nuestros clientes</p>
+            </div>
+            
+            <div class="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto-card">
+                    <div class="producto-img" style="background-color: #f8f1e9;">
+                        <img src="assets/img/Productos/cama1.png" alt="Juego de sábanas de algodón egipcio" class="producto-imagen-real" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="img-placeholder" style="display: none;">🛌</div>
+                    </div>
+                    <div class="producto-content">
+                        <h3 class="producto-title">Juego de sábanas de algodón egipcio</h3>
+                        <p class="producto-desc">Suavidad y transpirabilidad para noches de sueño perfectas.</p>
+                        <div class="producto-precio">$89.990</div>
+                        <a href="productos.html?categoria=cama" class="btn btn-outline">Ver más</a>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="producto-card">
+                    <div class="producto-img" style="background-color: #f5f0f8;">
+                        <img src="assets/img/Productos/cocina1.png" alt="Set de ollas antiadherentes" class="producto-imagen-real" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="img-placeholder" style="display: none;">🍲</div>
+                    </div>
+                    <div class="producto-content">
+                        <h3 class="producto-title">Set de ollas antiadherentes</h3>
+                        <p class="producto-desc">5 piezas de calidad profesional para tu cocina.</p>
+                        <div class="producto-precio">$124.990</div>
+                        <a href="productos.html?categoria=cocina" class="btn btn-outline">Ver más</a>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="producto-card">
+                    <div class="producto-img" style="background-color: #f0f7ee;">
+                        <img src="assets/img/Productos/menaje1.png" alt="Vajilla de porcelana blanca" class="producto-imagen-real" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="img-placeholder" style="display: none;">🥘</div>
+                    </div>
+                    <div class="producto-content">
+                        <h3 class="producto-title">Vajilla de porcelana blanca</h3>
+                        <p class="producto-desc">Elegante set de 24 piezas para 6 personas.</p>
+                        <div class="producto-precio">$67.990</div>
+                        <a href="productos.html?categoria=menaje" class="btn btn-outline">Ver más</a>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="producto-card">
+                    <div class="producto-img" style="background-color: #eef8f7;">
+                        <img src="assets/img/Productos/organizacion1.png" alt="Organizador modular para closet" class="producto-imagen-real" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="img-placeholder" style="display: none;">📦</div>
+                    </div>
+                    <div class="producto-content">
+                        <h3 class="producto-title">Organizador modular para closet</h3>
+                        <p class="producto-desc">Sistema adaptable para maximizar el espacio.</p>
+                        <div class="producto-precio">$45.990</div>
+                        <a href="productos.html?categoria=organizacion" class="btn btn-outline">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="productos.html" class="btn btn-primary">Ver todos los productos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cómo funciona -->
+    <section id="como-funciona" class="section proceso">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Cómo comprar en Todo Barato Hogar</h2>
+                <p class="section-subtitle">Un proceso simple y transparente</p>
+            </div>
+            
+            <div class="proceso-steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="step-title">1. Selecciona productos</h3>
+                    <p class="step-desc">Explora nuestro catálogo y añade a tu carrito los productos que te interesan.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                    <h3 class="step-title">2. Envía tu solicitud</h3>
+                    <p class="step-desc">Genera tu pedido y envíalo por WhatsApp o correo para consultar disponibilidad.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="step-title">3. Compra en tienda física</h3>
+                    <p class="step-desc">Visítanos para ver los productos en persona y realizar tu compra final.</p>
+                </div>
+            </div>
+            
+            <div class="aviso-importante">
+                <i class="fas fa-info-circle"></i>
+                <p><strong>Importante:</strong> Las compras se realizan exclusivamente en nuestra tienda física. Este sitio web es para consulta de productos y precios referenciales.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Ubicación -->
+    <section id="ubicacion" class="section ubicacion">
+        <div class="container">
+            <div class="ubicacion-content">
+                <div class="ubicacion-info">
+                    <h2 class="section-title">Visita nuestra tienda</h2>
+                    <p class="ubicacion-desc">Ven a conocer nuestros productos en persona y recibe asesoría personalizada de nuestro equipo.</p>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Dirección</h3>
+                            <p>Aníbal Pinto 347, Nueva Imperial<br>Araucanía, Chile</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="far fa-clock"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Horarios de atención</h3>
+                            <p>Lunes a Viernes: 10:00 - 20:00 hrs<br>Sábados: 10:00 - 18:00 hrs<br>Domingos: Cerrado</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Contacto</h3>
+                            <p>+56 2 2345 6789<br>info@todobaratohogar.cl</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ubicacion-mapa">
+                    <div class="mapa-placeholder">
+                        <div class="mapa-content">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Mapa de ubicación</p>
+                            <small>Aníbal Pinto 347, Nueva Imperial, Araucanía</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="assets/img/logo_Barato.png" alt="Todo Barato Hogar" class="logo-img-footer">
+                        <span class="logo-text">Todo Barato Hogar</span>
+                    </a>
+                    <p class="footer-desc">Productos seleccionados para transformar tu hogar en un espacio de confort y elegancia.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/todobaratohogar" class="social-link" aria-label="Facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/todobaratohogar" class="social-link" aria-label="Instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/todobaratohogar" class="social-link" aria-label="Twitter" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="#categorias">Categorías</a></li>
+                        <li><a href="#ubicacion">Ubicación</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Categorías</h3>
+                    <ul class="footer-links">
+                        <li><a href="productos.html?categoria=cama">Ropa de cama</a></li>
+                        <li><a href="productos.html?categoria=cocina">Cocina</a></li>
+                        <li><a href="productos.html?categoria=menaje">Menaje</a></li>
+                        <li><a href="productos.html?categoria=organizacion">Organización</a></li>
+                        <li><a href="productos.html?categoria=otras">Otras</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Aníbal Pinto 347, Nueva Imperial</li>
+                        <li><i class="fas fa-phone-alt"></i> +56 2 2345 6789</li>
+                        <li><i class="far fa-envelope"></i> info@todobaratohogar.cl</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Todo Barato Hogar. Todos los derechos reservados. - Template By Löwe Studio</p>
+                <div class="footer-legal">
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos y condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Iconos flotantes de redes sociales -->
+    <div class="floating-icons">
+        <a href="https://wa.me/+56912345678" class="floating-icon whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="floating-tooltip">¡Contáctanos!</span>
+        </a>
+        <a href="https://instagram.com/todobaratohogar" class="floating-icon instagram" target="_blank" rel="noopener" aria-label="Seguir en Instagram">
+            <i class="fab fa-instagram"></i>
+            <span class="floating-tooltip">Síguenos</span>
+        </a>
+        <a href="https://facebook.com/todobaratohogar" class="floating-icon facebook" target="_blank" rel="noopener" aria-label="Seguir en Facebook">
+            <i class="fab fa-facebook-f"></i>
+            <span class="floating-tooltip">Visítanos</span>
+        </a>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
